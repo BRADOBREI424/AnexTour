@@ -1,0 +1,59 @@
+﻿<Window x:Class="AnexTour.WindowsFolder.WinTourAgent"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AnexTour.WindowsFolder"
+        mc:Ignorable="d"
+        Title="Турагент" Height="650" Width="1250"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="150"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="110"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        <Image x:Name="AnexTourLogo" Style="{DynamicResource ImageLogo}"/>
+        <Label x:Name="lblLogoTourAgent" Grid.Column="1" Content="Турагент"
+               Style="{DynamicResource lblLogoStyle}"/>
+        <Menu x:Name="mnTourAgent" Grid.Column="1" Grid.Row="2">
+            <MenuItem x:Name="mniAdd" Header="Добавление">
+                <MenuItem x:Name="mniAddClient" Header="Клиент">
+                    <MenuItem x:Name="mniAddClientIndividual" Header="Физическое лицо" 
+                              Click="mniAddClientIndividual_Click"/>
+                    <MenuItem x:Name="mniAddClientLegalEntity" Header="Юридическое лицо" 
+                              Click="mniAddClientLegalEntity_Click"/>                    
+                </MenuItem>
+                <MenuItem x:Name="mniAddTourOperator" Header="Туроператор" Click="mniAddTourOperator_Click" />
+            </MenuItem>
+            <MenuItem x:Name="mniLists" Header="Списки">
+                <MenuItem x:Name="mniListClient" Header="Клиент">
+                    <MenuItem x:Name="mniListClientIndividual" Header="Физическое лицо" 
+                              Click="mniListClientIndividual_Click"/>
+                    <MenuItem x:Name="mniListClientLegalEntity" Header="Юридичесоке лицо" 
+                              Click="mniListClientLegalEntity_Click" />
+                </MenuItem>
+                <MenuItem x:Name="mniListTourOperator" Header="Туроператор" Click="mniListTourOperator_Click" />
+            </MenuItem>
+            <MenuItem x:Name="mniReports" Header="Отчеты">
+                <MenuItem x:Name="mniVouchers" Header="По путевкам" Click="mniVouchers_Click" />
+                <MenuItem x:Name="mniTourOperator" Header="По туроператорам" Click="mniTourOperator_Click" />
+            </MenuItem>
+            <MenuItem x:Name="mniRegistrationVoucher" Header="Оформление путевки">
+                <MenuItem x:Name="mniClientIndividual" Header="На физичесоке лицо" Click="mniClientIndividual_Click" />
+                <MenuItem x:Name="mniClientLegalEntity" Header="На юридичесоке лицо" Click="mniClientLegalEntity_Click" />
+            </MenuItem>
+            <MenuItem x:Name="mniBack" Header="Назад" Click="mniBack_Click"/>
+        </Menu>
+        <Image x:Name="TourAgetnMain" Grid.Row="4" Grid.Column="1"
+               Source="/AnexTour;component/ResourcesFolder/TourAgentMain.jpg"/>
+    </Grid>
+</Window>

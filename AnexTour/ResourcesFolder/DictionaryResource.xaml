@@ -1,0 +1,116 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.Red.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Indigo.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <Style x:Key="lblStyle" TargetType="Label" BasedOn="{StaticResource MaterialDesignLabel}">        
+        <Setter Property="FontSize" Value="24"/>
+        <Setter Property="Margin" Value="12"/>        
+        <Setter Property="HorizontalContentAlignment" Value="Right"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Foreground" Value="#112189"/>
+    </Style>
+    
+    <Style x:Key="lblLogoStyle" TargetType="Label"
+        BasedOn="{StaticResource lblStyle}">
+        <Setter Property="FontSize" Value="30"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>        
+    </Style>
+
+    <Style TargetType="TextBox" BasedOn="{StaticResource MaterialDesignFilledTextBox}">
+        <Setter Property="FontFamily" Value="Tahoma"/>
+        <Setter Property="FontSize" Value="26"/>
+        <Setter Property="Margin" Value="12"/>       
+        <Setter Property="HorizontalContentAlignment" Value="Left"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Foreground" Value="#112189"/>
+        <Setter Property="BorderBrush" Value="#B80505"/>       
+        <Setter Property="Background" Value="{x:Null}"/>
+    </Style>
+
+    <Style TargetType="PasswordBox" BasedOn="{StaticResource MaterialDesignFilledPasswordBox}">
+        <Setter Property="FontFamily" Value="Tahoma"/>
+        <Setter Property="FontSize" Value="26"/>
+        <Setter Property="Margin" Value="12"/>      
+        <Setter Property="HorizontalContentAlignment" Value="Left"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>       
+        <Setter Property="Foreground" Value="#112189"/>
+        <Setter Property="BorderBrush" Value="#B80505"/>
+        <Setter Property="Background" Value="{x:Null}"/>
+    </Style>
+
+    <Style TargetType="Button" BasedOn="{StaticResource MaterialDesignRaisedAccentButton}">
+        <Setter Property="FontFamily" Value="Tahoma"/>
+        <Setter Property="FontSize" Value="26"/>        
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Foreground" Value="#112189"/>
+        <Setter Property="BorderBrush" Value="#B80505"/>
+        <Setter Property="Background" Value="{x:Null}"/>
+        <Setter Property="Height" Value="70"/>
+    </Style>
+    <Style TargetType="Menu" BasedOn="{StaticResource MaterialDesignMenu}">
+        <Setter Property="FontFamily" Value="Tahoma"/>
+        <Setter Property="FontSize" Value="26"/>        
+        <Setter Property="Foreground" Value="#112189"/>
+        <Setter Property="BorderBrush" Value="#B80505"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Background" Value="{x:Null}"/>
+    </Style>
+    <Style TargetType="MenuItem" BasedOn="{StaticResource MaterialDesignMenuItem}">
+        <Setter Property="FontFamily" Value="Tahoma"/>
+        <Setter Property="FontSize" Value="26"/>        
+        <Setter Property="Foreground" Value="#112189"/>                
+        <Setter Property="Height" Value="40"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="Background" Value="{x:Null}"/>
+        <Setter Property="MinHeight" Value="50"/>        
+    </Style>
+    <Style x:Key="ImageLogo" TargetType="Image">
+        <Setter Property="Margin" Value="12"/>
+        <Setter Property="Source" Value="/AnexTour;component/ResourcesFolder/AnexTourLogo.png"/>
+    </Style>
+    <Style x:Key="WindowStyle" TargetType="Window">
+        <Setter Property="Background" Value="#707072"/>
+    </Style>
+    <Style TargetType="ComboBox" BasedOn="{StaticResource MaterialDesignFloatingHintComboBox}">
+        <Setter Property="FontFamily" Value="Tahoma"/>
+        <Setter Property="FontSize" Value="26"/>
+        <Setter Property="Margin" Value="12"/>
+        <Setter Property="HorizontalContentAlignment" Value="Left"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Foreground" Value="#112189"/>
+        <Setter Property="BorderBrush" Value="#B80505"/>
+        <Setter Property="Background" Value="{x:Null}"/>
+    </Style>
+    <Style TargetType="DatePicker" BasedOn="{StaticResource MaterialDesignFloatingHintDatePicker}">
+        <Setter Property="FontFamily" Value="Tahoma"/>
+        <Setter Property="FontSize" Value="26"/>
+        <Setter Property="Margin" Value="12"/>
+        <Setter Property="HorizontalContentAlignment" Value="Left"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Foreground" Value="#112189"/>
+        <Setter Property="BorderBrush" Value="#B80505"/>
+        <Setter Property="Background" Value="{x:Null}"/>
+    </Style>
+    <Style TargetType="DataGrid" 
+           BasedOn="{StaticResource MaterialDesignDataGrid}">
+        <Setter Property="FontFamily" Value="Tahoma"/>
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="Foreground" Value="#112189"/>
+        <Setter Property="BorderBrush" Value="#B80505"/>
+        <Setter Property="Background" Value="{x:Null}"/>
+    </Style>
+    <Style x:Key="imSearch" TargetType="Image">
+        <Setter Property="Source" Value="/AnexTour;component/ResourcesFolder/SearchIcon.png"/>
+        <Setter Property="Margin" Value="12"/>
+    </Style>
+</ResourceDictionary>

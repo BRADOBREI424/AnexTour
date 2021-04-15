@@ -1,0 +1,85 @@
+﻿<Window x:Class="AnexTour.WindowsFolder.WindowsReports.WinReportTravelPackage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AnexTour.WindowsFolder.WindowsReports"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="Отчеты по путевкам" Height="950" Width="1850"
+        WindowStartupLocation="CenterScreen" Loaded="Window_Loaded" >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition/>           
+            <ColumnDefinition Width="50"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        <Image x:Name="AnexTourLogo" Style="{DynamicResource ImageLogo}"
+               Grid.ColumnSpan="2"/>
+        <Label x:Name="lblLogoTourAgent" Grid.Column="2" Content="Отчеты по путевкам"
+               Grid.ColumnSpan="3"
+               Style="{DynamicResource lblLogoStyle}"/>
+        <DatePicker x:Name="dpPeriodFrom" Grid.Column="1" Grid.Row="2"
+                    Grid.ColumnSpan="2"
+                 materialDesign:HintAssist.Hint="Период с"
+                 materialDesign:HintAssist.IsFloating="True"/>
+        <DatePicker x:Name="dpPeriodTo" Grid.Column="4" Grid.Row="2"
+                 materialDesign:HintAssist.Hint="Период по"
+                 materialDesign:HintAssist.IsFloating="True"/>
+        <Button x:Name="btnExport" Content="Экспорт в Excel"
+                Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="2"                 
+                materialDesign:ButtonAssist.CornerRadius="20"/>
+        <Button x:Name="btnBack" Content="Назад"
+                Grid.Column="4" Grid.Row="4"                 
+                materialDesign:ButtonAssist.CornerRadius="20" Click="btnBack_Click"/>
+        <DataGrid x:Name="dgReportTravelPackage" Grid.Row="6" 
+                  Grid.Column="1" Grid.ColumnSpan="4"
+                  IsReadOnly="True" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="dgTcIdTravelPackage"
+                                    Header="№ п/п"
+                                    Binding="{Binding IdTravelPackage}"/>
+                <DataGridTextColumn x:Name="dgTcDate"
+                                    Header="Дата"
+                                    Binding="{Binding Date}"/>
+                <DataGridTextColumn x:Name="dgTcCode"
+                                    Header="ОКУН"
+                                    Binding="{Binding Code}"/>
+                <DataGridTextColumn x:Name="dgTcPrice"
+                                    Header="Цена путевки"
+                                    Binding="{Binding Price}"/>
+                <DataGridTextColumn x:Name="dgTcFullNameTourOperator"
+                                    Header="Название туроператора"
+                                    Binding="{Binding FullNameTourOperator}"/>
+                <DataGridTextColumn x:Name="dgTcFIODirector"
+                                    Header="ФИО директора"
+                                    Binding="{Binding FIOTravelAgent}"/>
+                <DataGridTextColumn x:Name="dgTcCountryName"
+                                    Header="Страна"
+                                    Binding="{Binding CountryName}"/>
+                <DataGridTextColumn x:Name="dgTcNamePriceType"
+                                    Header="Тип оплаты"
+                                    Binding="{Binding NamePriceType}"/>
+                <DataGridTextColumn x:Name="dgTcFIOClient"
+                                    Header="ФИО клиента(физ. лицо)"
+                                    Binding="{Binding FIOClient}"/>
+                <DataGridTextColumn x:Name="dgTcFullName"
+                                    Header="Название компании клиента(юр. лицо)"
+                                    Binding="{Binding FullName}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

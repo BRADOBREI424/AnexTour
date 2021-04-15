@@ -1,0 +1,48 @@
+﻿<Window x:Class="AnexTour.WindowsFolder.WindowsAdd.WinAddCountry"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AnexTour.WindowsFolder.WindowsAdd"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="Добавление страны" Height="500" Width="800"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="150"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="20"/>
+            <RowDefinition/>
+            <RowDefinition Height="20"/>
+            <RowDefinition/>
+            <RowDefinition Height="20"/>
+            <RowDefinition/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        <Image x:Name="imLogo" Style="{DynamicResource ImageLogo}"/>
+        <Label x:Name="lblAddCountryLogo" Content="Добавить страну"
+               Grid.Column="1" Style="{DynamicResource lblLogoStyle}"
+               Grid.ColumnSpan="3"/>
+        <TextBox x:Name="tbAddCountry" Grid.Row="2" Grid.Column="1"
+                 materialDesign:HintAssist.Hint="Страна"
+                 materialDesign:HintAssist.IsFloating="True"
+                 Grid.ColumnSpan="3"/>
+        <TextBox x:Name="tbAddVisaPrice" Grid.Row="4" Grid.Column="1"
+                 materialDesign:HintAssist.Hint="Стоимость визы"
+                 materialDesign:HintAssist.IsFloating="True"
+                 Grid.ColumnSpan="3"/>
+        <Button x:Name="btnAddCity" Grid.Row="6" Grid.Column="1"
+                Content="Добавить"
+                materialDesign:ButtonAssist.CornerRadius="20" Click="btnAddCity_Click"/>
+        <Button x:Name="btnBack" Grid.Column="3" Grid.Row="6"
+                Content="Назад"
+                materialDesign:ButtonAssist.CornerRadius="20" Click="btnBack_Click"/>
+    </Grid>
+</Window>
